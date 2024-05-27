@@ -23,12 +23,10 @@ model User {
   birthDate      DateTime
   phoneNumber    String
   volunteerType  String
-  crm            String
-  area           String
+  crm            String?
+  area           String?
   state          String
   availability   String
   notes          String?
   createdAt      DateTime  @default(now())
-
-  @@map("users")
 }
