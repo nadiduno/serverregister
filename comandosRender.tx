@@ -1,0 +1,24 @@
+Node 
+Build Command:
+npm ci && npm run build && npx prisma migrate deploy
+
+Start Command:
+npm run start
+
+Environment Variables
+Name:
+DATABASE_URL
+Value
+postgres://serverregister_user:0*******
+
+
+
+**************************
+Instalar as dependencias do projetosin actualizar
+npm ci
+Script congfigurados no package.json
+npm ci && npm run build && npx prisma migrate deploy
+npm run start
+
+Internal Database URL Copiar e colar do render (BD - postgress criada)
+postgres://serverregister_user:0*******
