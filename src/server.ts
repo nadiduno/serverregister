@@ -40,7 +40,7 @@ app.post('/users', async (request, reply) => {
     lastName: z.string(), 
     email: z.string().email(),
     cpf: z.number(),
-    birthDate: z.date(),
+    birthDate: z.string(),
     phoneNumber: z.string(),
     volunteerType: z.string(),
     crm: z.string(),
