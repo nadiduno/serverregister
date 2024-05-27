@@ -11,7 +11,7 @@ interface UserParams {
   lastName: string; 
   email: string;
   cpf: number;
-  birthDate: Date;
+  birthDate: string;
   phoneNumber: string;
   volunteerType: string;
   crm: string;
