@@ -19,7 +19,7 @@ model User {
   name           String
   lastName       String
   email          String
-  cpf            BIGINT   @unique
+  cpf            String
   birthDate      String
   phoneNumber    String
   volunteerType  String

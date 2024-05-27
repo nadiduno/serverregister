@@ -10,7 +10,7 @@ interface UserParams {
   name: string;
   lastName: string; 
   email: string;
-  cpf: number;
+  cpf: string;
   birthDate: string;
   phoneNumber: string;
   volunteerType: string;
@@ -39,7 +39,7 @@ app.post('/users', async (request, reply) => {
     name: z.string(),
     lastName: z.string(), 
     email: z.string().email(),
-    cpf: z.number(),
+    cpf: z.string(),
     birthDate: z.string(),
     phoneNumber: z.string(),
     volunteerType: z.string(),
@@ -74,7 +74,7 @@ app.post('/users', async (request, reply) => {
     return reply.status(201).send();
   } catch (error) {
     console.error('Erro ao criar usuário: ', error);
-    return reply.status(500).send({ message: 'Erro interno do servidor' });
+    return reply.status(500).send({ message: error });
   }
 });
 
@@ -150,7 +150,7 @@ app.delete('/users/:id', async (request, reply) => {
     return reply.status(200).send(deletedUser);
   } catch (error) {
     console.error('Error when deleting user: ', error);
-    return reply.status(500).send({ message: 'Internal server error' });
+    return reply.status(500).send({ message: error });
   }
 });
 
