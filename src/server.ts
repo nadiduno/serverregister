@@ -14,8 +14,8 @@ interface UserParams {
   birthDate: Date;
   phoneNumber: string;
   volunteerType: string;
-  crm?: string | null;
-  area?: string | null;
+  crm: string;
+  area: string;
   state: string;
   availability: string;
   notes?: string | null;
@@ -43,8 +43,8 @@ app.post('/users', async (request, reply) => {
     birthDate: z.date(),
     phoneNumber: z.string(),
     volunteerType: z.string(),
-    crm: z.string().nullable(),
-    area: z.string().nullable(),
+    crm: z.string(),
+    area: z.string(),
     state: z.string(),
     availability: z.string(),
     notes: z.string().nullable(),
